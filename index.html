@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue</title>
+    <link rel="stylesheet" type="text/css" href="./static/style/font/iconfont.css"/>
+  </head>
+  <body>
+    <!-- <div>这个是index.html 用vite作为web服务器这个文件会被默认加载</div> -->
+    <div id="app">
+      123 该id下的内容会被vue实例挂载($mount执行完毕)的时候替换
+    </div>
+  <!-- html 关联一个入口文件 加载 vue实例 从而拥有vue运行时 -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

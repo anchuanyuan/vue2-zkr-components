@@ -1,0 +1,325 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    font-size: 14px;
+    overflow-y: scroll;
+}
+
+body {
+    width: 100vw;
+    padding: 0!important;
+    overflow: hidden;
+}
+::-webkit-scrollbar { /* 滚动条整体部分 */
+    width: 8px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 8px;
+    margin-right: 2px;
+}
+
+::-webkit-scrollbar-thumb { /* 滑块 */
+    width: 8px;
+    border-radius: 5px;
+    background: #CBCBCB;
+}
+
+::-webkit-scrollbar-thumb:hover { /* 鼠标移入滑块 */
+    background: #909090;
+}
+:root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+:root body {
+    position: absolute;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.hide {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
+.textLeft{
+    text-align: left;
+}
+
+.clearFloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearFloat {
+    zoom: 1
+}
+/*清除浮动*/
+.clearfix:after {
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.relative {
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+input:focus {
+    outline: none
+}
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.bold {
+    font-weight: 600;
+}
+.gray {
+    color: #606266;
+}
+.lightGray{
+    color: #909399;
+}
+.gray-line{
+    display: inline-block;
+    padding: 0 5px;
+    color: #e8e8e8;
+}
+.blue {
+    color: #198fff;
+}
+.orange {
+    color: orange;
+}
+.purple {
+    color: #947BF7;
+}
+.cursor{
+	cursor: pointer;
+}
+.red2 {
+    color: #FC4D57 !important;
+}
+.red {
+    color: #FE5B5B !important;
+}
+
+.yellow {
+    color: #FFA100;
+}
+
+.green {
+    color: #67c23a;
+}
+
+.black {
+    color: #000;
+}
+.deepblue{
+    color: #000066;
+}
+.bgblue {
+    color: #fff;
+    background-color: #198fff;
+}
+
+.bgpurple {
+    color: #fff;
+    background-color: #947BF7;
+}
+
+.bgred {
+    color: #fff;
+    background-color: #FE5B5B !important;
+}
+
+.bgyellow {
+    color: #fff;
+    background-color: #FFA100 !important;
+}
+.bggreen {
+    color: #fff;
+    background-color: #67c23a !important;
+}
+.bggray {
+    background-color: #f6f5f9 !important;
+}
+.margin {
+    margin:10px;
+}
+.padding {
+    padding:10px 1em;
+}
+.paddingX{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.paddingY{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.pageBox{
+    overflow: hidden;
+    padding: 0.5em 0 1em;
+    border-bottom: 1px solid #e8e8e8;
+    .pageRow{
+        line-height: 2em;
+        padding: 0 1.5em;
+        .statusBtn{
+            font-size: 0.9em;
+            padding: 0.1em 0.2em;
+            border-radius: 0.3em;
+            &.bgblue{
+                color: #fff;
+            }
+        }
+    }
+    .pageBoxItem{
+        padding: 10px 1.5em;
+        overflow: hidden;
+    }
+}
+.white {
+    color: #fff !important;
+}
+.border-b {
+    border-bottom: 1px solid #e8e8e8;
+}
+.border-r {
+    border-right: 1px solid #e8e8e8;
+}
+.common-dialog-wrapper {
+    .pageBox {
+        padding: 0;
+    }
+    .pageBox:last-child{
+        border: none;
+    }
+}
+.common-container-wrapper {
+    .pageBox:last-child{
+        border: none;
+    }
+}
+
+//全局序列号样式
+.serialNum {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    z-index: 1;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 60%;
+    color: #fff;
+    background-color: #198FFF;
+}
+//全局局部圆按钮->form
+.circleBtn {
+    width: 1.6em;
+    height: 1.6em;
+    line-height: 1.6em;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+//去掉element时间选择器头部切换图标
+.clearButton{
+   .el-picker-panel__icon-btn{
+          display: none !important;
+        }
+}
+.tagBtn{
+    color: #fff;
+    background-color: #198FFF;
+    padding: 4px 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+//->搜索输入框样式
+.searchInput{
+    .el-input__inner{
+        height: 28px !important;
+        line-height: 28px !important;
+        border-radius: 28px !important;
+    }
+    .el-input__icon {
+        line-height: 28px !important;
+    }
+}
+//全局无数据样式
+.noData {
+    font-size: 24px;
+    text-align: center;
+}
+.el-button--mini, .el-button--small {
+    font-size: 14px;
+    border-radius: 3px;
+}
+.pointer {
+    cursor: pointer;
+}
+//省略号
+.ellipsis {
+    * {
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+    }
+}
+.ellipsis-text {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.el-checkbox__inner {
+    border: 1px solid #888 !important;
+}
+.hover-blue:hover {
+    color: #218aff !important;
+    text-decoration: underline;
+}
+.fs18 {
+    font-size: 18px !important;
+}
+.necessary-style {
+  input {
+    border: 1px solid #FF4848 !important;
+
+    &:hover, &:active, &:focus {
+      border: 1px solid #FF4848 !important;
+    }
+  }
+}
+.edui-editor {
+    z-index: 1000 !important;
+}
+.el-message-box__wrapper {
+    z-index: 99999!important;
+}
