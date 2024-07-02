@@ -26,11 +26,12 @@
     ></span>
     <!-- " @click="fullscreen=!fullscreen" -->
     <span
-      class="right-title iconfont icon-close"
+      class="right-title"
       title="关闭"
       @click="closeVisible()"
       v-if="showClose"
-    ></span>
+    >
+    <SvgIcon name="close"/></span>
   </div>
   <div class="dialog-form" :style="heightStyle">
     <slot></slot>
@@ -56,6 +57,8 @@
 </el-dialog>
 </template>
 <script>
+import SvgIcon from '../../components/common/SvgIcon.vue';
+
 export default {
 name: "commonDialog",
 props: {

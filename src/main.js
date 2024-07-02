@@ -10,6 +10,7 @@ import "@/assets/style/reset.scss";
 import "@/assets/style/plugin.scss";
 import $ from 'jquery';
 window.$ = $;
+import 'virtual:svg-icons-register'
 
 import App from './App.vue'
 import 'uno.css'
